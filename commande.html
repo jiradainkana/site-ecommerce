@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commande</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <section>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="image/logo-removebg-preview.png " width="50px" alt=""></a><p class="fs-3 fw-bold pt-2" >CAMERRESTO</p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav gap-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pourquoi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Menus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Commandes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+    
+             
+
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="order"></div>
+            <div class="col-lg-6 ">
+                <p class="display-6 fw-bold"> POULET DG</p>
+                <div class=" text-danger">  <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                 <p class="fs-5">10000FCFA <span class="fs-5 text-decoration-line-through">20000FCFA</span><span class="fs-5 bg-danger text-white">Promo</span>
+                    <p class="fs-5">Vous economisez <span class="fw-bold">10000</span>FCFA</p>
+                    <p class=""><i class="fa-solid fa-truck"></i> Livraison gratuit sur 1H</p>
+                    <p class=""><i class="fa-solid fa-refresh"></i> Retour gratuit sur 30jours</p>
+                    <p class=""><i class="fa-solid fa-dollar-sign"></i> payement a la livraison</p>
+                    <div class="hstack gap-2">
+                    <p>Quantité</p>
+                    <input type="number" class="form-control w-25 " min="1" max="5">
+                    <p class="fs-5">Total: <span>10000</span>FCFA </p>
+                    
+                </div>
+        <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">payer maintenant</button>
+               
+
+
+              </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+ 
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Detail sur la carte</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <P class="fs-6 text-center">VOUS ALLEZ PAYER AU TOTAL:</P>
+
+      <form class="row g-3 needs-validation novalidate">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Entrer votre nom" required>
+        </div>
+        <div class="col-md-6">
+          
+          <input type="email" class="form-control" id="validationCustom02" value=""  placeholder="Entrer votre address">
+          
+        </div>
+        <div class="col-md-6">
+         
+          <input type="number" class="form-control" id="validationCustom03" placeholder="Entrer votre télephone" required>
+          
+        </div>
+        <div class="col-md-6">
+         
+          <select class="form-select" aria-label="Default select example" id="validationCustom04"required>
+            <option selected>mode de payement</option>
+            <option value="1">MTN money</option>
+            <option value="2">Orange money</option>
+            <option value="3">Paypall</option>
+            </select>
+          
+        </div>
+      </form>
+
+    <div class="col-md-12 pt-2 text-center">
+        <button class="btn btn-primary w-100" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" disabled >Payer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
