@@ -9,39 +9,38 @@
     <link rel="stylesheet" href="css/all.min.css">  
 </head>
 <body>
-    <header id="header" class="">
-
+    <header>
     <nav id="navbar" class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="image/logo-removebg-preview.png " width="50px" alt=""></a><p class="fs-3 fw-bold pt-2" >CAMERRESTO</p>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="#"><img src="image/logo-removebg-preview.png " width="50px" alt=""></a><p class="fs-4 fw-bold" >CamerResto</p>
+          <button class="navbar-toggler"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav gap-5">
+            <ul class="navbar-nav gap-3">
               <li class="nav-item">
-                <a class="nav-link active  scrollto" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active  "id="bar" aria-current="page" href="#">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  scrollto" href="#plats">Plats</a>
+                <a class="nav-link  " href="#plats">Plats</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  scrollto" href="#Pourquoi">Pourquoi</a>
+                <a class="nav-link  " href="#Pourquoi">Pourquoi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  scrollto" href="#Menus">Menus</a>
+                <a class="nav-link  " href="#Menus">Menus</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  scrollto" href="commande.html">Commandes</a>
+                <a class="nav-link  " href="commande.html">Commandes</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link  scrollto" href="#A propos">About</a>
+                <a class="nav-link  " href="#Apropos">About</a>
               </li>
 
-              <div class="icon  pt-2 ">
+              <div class="icon pt-2">
                 
-                <i class="fa-solid fa-cart-shopping" width=" 150px"></i>
-                <span class=" spa" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">0</span>
+                <i class="fa-solid fa-cart-shopping" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" width=" 150px"></i>
+                <span class="spa1"  id="cart_item">0</span>
                 
               </div>
 
@@ -98,53 +97,63 @@
         </button>
       </div>
     </section>
-    <section>
+    <section class="body">
       <div class="container ">
         <div class="para">
-          <p class="display-6 fw-bold plat text-center pt-4">LES PLATS POPULAIRES</p>
+          <p class="display-6 fw-bold plat text-center pt-4" id="plats">LES PLATS POPULAIRES</p>
         </div>
-        <div class="row d-flex  carda">
-          <div class="col-lg-4">
-            <div class="card" style="width: 22rem; height: 26.5rem;">
-              <img src="image/pouletpane.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Poulet Pané</h5>
-                <p class="text-center text-danger">  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </p>
-              <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
+        <div class="row g-3">
+          <div class=" col-12 col-md-6  col-sm-12 col-xs-12 col-lg-4">
+            <div class="card " id="card1" style="width: 22rem; height: 26.5rem;">
+              <div class="card-link">
+                <span class="price-none d-none">12000FCFA</span>
+                <img src="image/pouletpane.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Poulet Pané</h5>
+                  <p class="text-center text-danger">  <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+             </div>
+             <div class="btn3">
                <span class="text-center text-danger fs-5">12000FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
-              </div>
+               <button class="btn btn-primary btn2" id="btna">Add to Card</button>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card" style="width: 22rem; height: 26.5rem;">
+          <div class=" col-12 col-md-6  col-lg-4">
+          <div class="card" id="card2" style="width: 22rem; height: 26.5rem;">
+            <div class="card-link">  
               <img src="image/chocolat.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">5000FCFA</span>
               <div class="card-body">
                 <h5 class="card-title text-center">Frameboise au Chocolat</h5>
-                <p class="text-center text-danger">  <i class="fa-solid fa-star"></i>
+                <p class="text-center text-danger"><i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                 </p>
-              <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">5000FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
-              </div>
-              </div>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           </div>
+                
             </div>
+            <div class="btn3">
+              <span class="text-center text-danger fs-5">5000FCFA</span>
+              <button class="btn btn-primary btn2" id="btna">Add to Card</button>
+            </div>
+            </div>
+           
           </div>
-          <div class="col-lg-4">
-            <div class="card" style="width: 22rem; height: 26.5rem;">
+          <div class=" col-12 col-md-6  col-lg-4">
+            <div class="card" id="card3" style="width: 22rem; height: 26.5rem;">
+              <div class="card-link">
               <img src="image/biscuit.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">500FCFA</span>
               <div class="card-body">
                 <h5 class="card-title text-center">Savour de Biscuit</h5>
                 <p class="text-center text-danger">  <i class="fa-solid fa-star"></i>
@@ -154,19 +163,23 @@
                   <i class="fa-solid fa-star"></i>
                 </p>
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">500FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
+            </div>
+             
               </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">500FCFA</span>
+                 <button class="btn btn-primary btn2"id="btnc">Add to Card</button>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="row carda">
-          <div class="col-lg-4 pt-3">
+        <div class="row g-3"> 
+          <div class=" col-12 col-md-6 col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25rem;">
+              <div class="card-link">
               <img src="image/HamBurger.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">3500FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -177,16 +190,19 @@
                 <h5 class="card-title text-center">HamBurger</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">3500FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">3500FCFA</span>
+                 <button class="btn btn-primary btn2"id="btnd">Add to Card</button>
+               </div>
             </div>
           </div>
-          <div class="col-lg-4 pt-3">
+          <div class="  col-12  col-md-6 col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25rem;">
+              <div class="card-link">
               <img src="image/Pouletdg1.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">10000FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -197,18 +213,21 @@
                 <h5 class="card-title text-center">Poulet DG</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">10000FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">10000FCFA</span>
+                 <button class="btn btn-primary btn2"id="btne">Add to Card</button>
+               </div>
             </div>
           </div>
-          <div class="col-lg-4 pt-3">
+          <div class=" col-12 col-md-6  col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25rem;">
+              <div class="card-link">
               <img src="image/fritepomme.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">2000FCFA</span>
               <div class="card-body">
-                <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
+                <div class="text-center text-danger"><i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -217,26 +236,30 @@
                 <h5 class="card-title text-center">Frites de Pommes</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">2000FCFA</span>
-                <a href="commande.html" class="btn btn-primary btn2">Add to Card</a>
+            </div>
+             
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">2000FCFA</span>
+                 <button class="btn btn-primary btn2"id="btnf">Add to Card</button>
+               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
+    <section >
       <div class="container page">
-        <p class="display-6 text-center fw-bold pt-2 ">Pourquoi Nous Choisir?</p>
+        <p class="display-6 text-center fw-bold pt-2" id="Pourquoi">Pourquoi Nous Choisir?</p>
         <div class="row">
           <div class="col-lg-6 pt-3 image">
-            <img src="image/tofabout.jpg" class="card-img-top" alt="...">
+           
+            <img src="image/tofabout.jpg" class="card-img-top card4" alt="...">
+          
           </div>
           <div class="col-lg-6 pt-3">
-           <p class="display-6 fw-bold ">Meilleur Repas du Pays</p>
-           <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus voluptates temporibus repellat quo recusandae explicabo ad ex! Suscipit quos deleniti incidunt doloremque, dignissimos eligendi, officiis ab, facere vero non est Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eum praesentium ex cum quia magni, sed, quos iste libero inventore id odio voluptatem. Ipsam, esse. Quidem, error sapiente. Cumque, culpa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt eum maxime exercitationem nostrum hic libero enim consequuntur accusantium officia odit esse assumenda nulla similique laborum quasi dignissimos, iusto beatae consectetur.?!</p>
+           <p class="display-6 fw-bold  para4">Meilleur Repas du Pays</p>
+           <p class="text-center para5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus voluptates temporibus repellat quo recusandae explicabo ad ex! Suscipit quos deleniti incidunt doloremque, dignissimos eligendi, officiis ab, facere vero non est Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eum praesentium ex cum quia magni, sed, quos iste libero inventore id odio voluptatem. Ipsam, esse. Quidem, error sapiente. Cumque, culpa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt eum maxime exercitationem nostrum hic libero enim consequuntur accusantium officia odit esse assumenda nulla similique laborum quasi dignissimos, iusto beatae consectetur.?!</p>
            <div class="btn4 d-flex justify-content-center gap-3">
             <button class="btn btn-secondary"> <i class="fa-solid fa-truck"></i> Livraison gratuit</button>
             <button class="btn btn-secondary"><i class="fa-solid fa-dollar-sign"></i> Payement facile</button>
@@ -252,13 +275,15 @@
 
       </div>
     </section>
-    <section>
+    <section class="body">
       <div class="container">
-        <p class="text-center display-6 fw-bold pt-3">MENU DU JOUR SPECIAL</p>
-        <div class="row">
-          <div class="col-lg-4">
+        <p class="text-center display-6 fw-bold pt-3" id="Menus">MENU DU JOUR SPECIAL</p>
+        <div class="row g-3">
+          <div class=" col-12 col-md-6 col-lg-4">
             <div class="card" style="width: 22rem; height: 27.5rem;">
+              <div class="card-link">
               <img src="image/pommepile1.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">2000FCFA</span>
               <div class="card-body">
                 <h5 class="card-title text-center">Pilé pommes</h5>
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
@@ -268,16 +293,20 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">2000FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
+             
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">2000FCFA</span>
+                 <button class="btn btn-primary btn2"id="btng">Add to Card</button>
+               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class=" col-12 col-md-6 col-lg-4">
             <div class="card" style="width: 22rem; height: 27.5rem;">
+            <div class="card-link">
               <img src="image/malaxé.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">5000FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -288,16 +317,19 @@
                 <h5 class="card-title text-center">Banane Malaxé</h5>
               
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">5000FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">5000FCFA</span>
+                 <button button href="#" class="btn btn-primary btn2"id="btnh">Add to Card</button>
+               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class=" col-12 col-md-6  col-lg-4">
             <div class="card" style="width: 22rem; height: 27.5rem;">
+            <div class="card-link">
               <img src="image/saucejaune.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">5000FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -308,18 +340,22 @@
                 <h5 class="card-title text-center">Taro sauce Jaune</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">5000FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">5000FCFA</span>
+                 <button class="btn btn-primary btn2"id="btni">Add to Card</button>
+               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 pt-3">
+        <div class="row g-3">
+          <div class=" col-12 col-md-6 col-sm-12 col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25.5rem;">
+            <div class="card-link">
               <img src="image/kwui.jpg" class="card-img-top" alt="...">
+              
+                <span class="price-none d-none">3500FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -330,16 +366,19 @@
                 <h5 class="card-title text-center">Le kwui</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">3500FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger  fs-5">3500FCFA</span>
+                 <button class="btn btn-primary btn2"id="btnj">Add to Card</button>
+               </div>
             </div>
           </div> 
-          <div class="col-lg-4 pt-3">
+          <div class=" col-12 col-md-6  col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25.5rem;">
+            <div class="card-link">
               <img src="image/couscousLegumes.jfif" class="card-img-top" alt="...">
+              <span class="price-none d-none">10000FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -350,16 +389,19 @@
                 <h5 class="card-title text-center">Le couscous Legumes</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">10000FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">10000FCFA</span>
+                 <button class="btn btn-primary btn2"id="btna">Add to Card</button>
+               </div>
             </div>
           </div> 
-          <div class="col-lg-4 pt-3">
+          <div class=" col-12 col-md-6  col-lg-4 pt-3">
             <div class="card" style="width: 22rem; height: 25.5rem;">
+            <div class="card-link">
               <img src="image/okok.jpg" class="card-img-top" alt="...">
+              <span class="price-none d-none">2000FCFA</span>
               <div class="card-body">
                 <div class="text-center text-danger">  <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -370,84 +412,75 @@
                 <h5 class="card-title text-center">Le kock</h5>
                 
               <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <div class="btn3 ">
-               <span class="text-center text-danger fs-5">2000FCFA</span>
-                <a href="#" class="btn btn-primary btn2">Add to Card</a>
+            </div>
               </div>
-              </div>
+              <div class="btn3 ">
+                <span class="text-center text-danger fs-5">2000FCFA</span>
+                 <button  class="btn btn-primary btn2" id="btna">Add to Card</button>
+               </div>
             </div>
           </div> 
         </div>
       </div>
     </section>
-    <section>
+    <section class="body">
       <div class="container pt-5">
        
-        <p class="display-6 fw-bold text-center pt-3">Commande Maintenant Rapide et Gratuit </p>
+        <p class="display-6 fw-bold text-center pt-3 para6">Commande Maintenant Rapide et Gratuit </p>
        
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8 pt-5 bg- bg-warning">
-            <div class="alert alert-success text-center  " role="alert">
+        <div class="row d-flex justify-content-center update align-items-center">
+          <div class="col-lg-8 pt-5 form ">
+            <div class="alert alert-success text-center " id="alert-me" role="alert">
               Commande enregistrer avec success Mr/Mlle:
             </div>
-            <form class="row g-3 needs-validation " novalidate>
+            <form class="row g-3 needs-validation  " novalidate>
               
-              <div class="col-md-6">
+              <div class="col-md-6 ">
               
                 <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Entrer votre nom " required>
-               
+                <p class=" text-danger person d-none">veuillez remplir le champs</p>
               </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
+             
               <div class="col-md-6">
                
                 <input type="number" class="form-control" id="validationCustom03"  placeholder="Entrer le numéro de téléphone "required>
+                <p class=" text-danger person d-none">veuillez remplir le champs</p>
               </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
+             
              
               <div class="col-md-6">
                
                 <input type="text" class="form-control" id="validationCustom03"  placeholder="Entrer le nom de la nourriture "required>
-                
+                <p class=" text-danger person d-none ">veuillez remplir le champs</p>
               </div>
               <div class="col-md-6">
                
                 <input type="text" class="form-control " id="validationCustom03"  placeholder="Autre nourriture "required>
-                
-              </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
-              <div class="col-md-6">
-               
-                <input type="text" class="form-control " id="validationCustom03"  placeholder="le nombre de commande  "required>
-                
-              </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
-              <div class="col-md-6">
-                <input type="date" class="form-control" id="validationCustom03"  required>
-              </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
+                <p class=" text-danger person  d-none">veuillez remplir le champs</p>
               </div>
              
               <div class="col-md-6">
+               
+                <input type="text" class="form-control " id="validationCustom03"  placeholder="le nombre de commande  "required>
+                <p class=" text-danger person  d-none ">veuillez remplir le champs</p>
+              </div>
+             
+              <div class="col-md-6">
+                <input type="date" class="form-control" id="validationCustom03"  required>
+                <p class=" text-danger person  d-none">veuillez remplir le champs</p>
+              </div>
+              
+             
+              <div class="col-md-6">
                 <textarea class="form-control w-100" id="validationCustom03" rows="3" placeholder="Entrer votre address"></textarea>
+                <p class=" text-danger person d-none">veuillez remplir le champs</p>
               </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
+             
               <div class="col-md-6">
                 <textarea class="form-control w-100" id="validationCustom04" rows="3" placeholder="Description sur la commande"></textarea>
+                <p class=" text-danger person  d-none">veuillez remplir le champs</p>
               </div>
-              <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-              </div>
+             
             <button class=" btn btn-danger w-100">Commander</button>
             </form>
 
@@ -456,59 +489,111 @@
       </div>
     </section>
     <section>
-      <div class="container pt-3">
-        <p class="display-6 fw-bold text-center">A Propos de Nous</p>
+      <div class="container-fluid body pt-3">
+        <p class="display-6 fw-bold text-center" id="Apropos">A PROPOS DE NOUS</p>
         
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 ">
             <div class="mb-3">
-              <label for=""> changer de couleur du texte</label>
-              <input type="color" class="form-control w-100">
+              <label> changer de couleur du texte</label>
+              <input  type="color" class="form-control w-100 " id="color-input">
             </div>
           </div>
           <div class="col-lg-6">
             <div class="mb-3 ">
               <label>changer la taille du texte <span>16px</span></label>
-              <input type="range" class=" w-100">
+              <input type="range" class=" btninput  w-100" min="16px" max="100px">
             </div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="container">
-        <div class="row d-flex justify-content-center  ">
-          <div class="col-lg-8">
-          <select class="form-select bg-danger text-white" aria-label="Disabled select example">
-            <option selected >Lorem</option>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo vitae in numquam atque. Odit ipsum, nostrum assumenda magnam fugit tenetur aspernatur deserunt, architecto sint dignissimos rerum adipisci voluptatibus modi?</p>
-          </select>
-          <select class="form-select  bg-danger text-white" >
-            <option selected>Lorem</option>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo vitae in numquam atque. Odit ipsum, nostrum assumenda magnam fugit tenetur aspernatur deserunt, architecto sint dignissimos rerum adipisci voluptatibus modi?</p>
-          </select>
-          <select class="form-select  bg-danger text-white" aria-label="Disabled select example">
-            <option selected>Lorem</option>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo vitae in numquam atque. Odit ipsum, nostrum assumenda magnam fugit tenetur aspernatur deserunt, architecto sint dignissimos rerum adipisci voluptatibus modi?</p>
-          </select>
-          <select class="form-select  bg-danger text-white" aria-label="Disabled select example">
-            <option selected>Lorem</option>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo vitae in numquam atque. Odit ipsum, nostrum assumenda magnam fugit tenetur aspernatur deserunt, architecto sint dignissimos rerum adipisci voluptatibus modi?</p>
-          </select>
-          <select class="form-select  bg-danger text-white" aria-label="Disabled select example">
-            <option selected>lorem</option>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo vitae in numquam atque. Odit ipsum, nostrum assumenda magnam fugit tenetur aspernatur deserunt, architecto sint dignissimos rerum adipisci voluptatibus modi?</p>
-          </select>
+      <div class="container-fluid body">
+        <div class="row g-3 d-flex justify-content-center  ">
+       <div class="col-lg-8 gap-3">
+        <div class="accordion overflow-hidden " id="accordionExample">
+          <div class="accordion-item bg-danger">
+            <h2 class="accordion-header ">
+              <button  class="accordion-button bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                lorem
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show " data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="para" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rerum magni porro omnis officiis animi quasi doloribus facilis. Quasi, dolor. Saepe, similique ab. Ea recusandae quibusdam libero iste amet deserunt.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-danger">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                lorem
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+            <p class="para" id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem reiciendis, laudantium dolorem maxime necessitatibus adipisci! Incidunt fugiat natus a placeat modi. Quis perspiciatis, laborum sequi non rerum vel provident.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-danger">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               lorem
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="para" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed reprehenderit iure veniam neque ab quo eaque maxime fuga quos quibusdam eius quia nostrum incidunt, rerum placeat nesciunt facilis autem?</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white pt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+               lorem
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse bg-danger" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="para" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed reprehenderit iure veniam neque ab quo eaque maxime fuga quos quibusdam eius quia nostrum incidunt, rerum placeat nesciunt facilis autem?</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item ">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+               lorem
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse bg-danger" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="para" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed reprehenderit iure veniam neque ab quo eaque maxime fuga quos quibusdam eius quia nostrum incidunt, rerum placeat nesciunt facilis autem?</p>
+              </div>
+            </div>
+          </div>
         </div>
+       </div>
         </div>
       </div>
     </section>
+ 
+    <ul class="over">
+  
+      <div class=" base pt-2">
+                    
+        <i class="fa-solid fa-cart-shopping" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" width=" 150px"></i>
+        <span class="spa2"  id="cart_item">0</span>
+        
+      </div>
+    </ul>
 
+    <footer >
 
-    <footer>
-      <div class="container-fluid  bg-warning color ">
+      <div class="container-fluid bg-dark color w-100">
         <div class="mb text-white">
-          <p class="pt-5">Copyright 2022 by HTTC</p>
+          <p class="pt-5">Copyright©2024 by HTTC</p>
           <div class="col text-end text-white">
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-twitter"></i>
@@ -516,6 +601,7 @@
         </div>
         </div>
       </div>
+    
     </footer> 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -525,14 +611,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
          
-          <span class="display-6 text-center">0</span>
+          <span class="display-6 text-center" id="cart_item">0</span>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      
-           
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">  
           </div>
         </div>
       </div>
@@ -544,13 +628,50 @@
             <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">le nombre de commande dans la plateforme </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <span class="fs-3 text-center">0</span>
-          
+          <span class="fs-3 text-center" id="cart_item1">0</span>
         </div>
       </div>
     </div>
-
- <script src="js/jquery-3.7.1.min.js"></script>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <p class="text-center"  >
+                  
+                        <ul class="navbar-nav gap-3">
+                          <li class="nav-item">
+                            <a class="nav-link active  "id="bar" aria-current="page" href="#">Accueil</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link  " href="#plats">Plats</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link  " href="#Pourquoi">Pourquoi</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link  " href="#Menus">Menus</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link  " href="commande.html">Commandes</a>
+                          </li>
+                          <li class="nav-item ">
+                            <a class="nav-link  " href="#Apropos">About</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            
+                </p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+  <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

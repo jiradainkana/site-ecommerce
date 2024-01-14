@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-    <section>
+    <section class="">
+      <header>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="image/logo-removebg-preview.png " width="50px" alt=""></a><p class="fs-3 fw-bold pt-2" >CAMERRESTO</p>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,38 +37,37 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-    
-             
-
-             
             </ul>
           </div>
         </div>
       </nav>
+    </header>
       <section>
-    <div class="container">
+    <div class="container-fluid HamBurger">
         <div class="row pt-5">
-            <div class="order"></div>
+          
+            <div class=" col-lg-6">
+              <img id="imageProduit" src=""  class="card-img-top" alt="">
+            </div>
             <div class="col-lg-6 ">
-                <p class="display-6 fw-bold"> POULET DG</p>
+                <p class="display-6 titreProduit fw-bold"></p>
                 <div class=" text-danger">  <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                   </div>
-                 <p class="fs-5">10000FCFA <span class="fs-5 text-decoration-line-through">20000FCFA</span><span class="fs-5 bg-danger text-white">Promo</span>
-                    <p class="fs-5">Vous economisez <span class="fw-bold">10000</span>FCFA</p>
+                 <span class="fs-5 price promo-price"></span><span class="fs-5 text-decoration-line-through">20000FCFA</span><span class="fs-5 bg-danger text-white">Promo</span>
+                    <p class="fs-5 price">Vous economisez <span class="fw-bold Total "></span></p>
                     <p class=""><i class="fa-solid fa-truck"></i> Livraison gratuit sur 1H</p>
                     <p class=""><i class="fa-solid fa-refresh"></i> Retour gratuit sur 30jours</p>
                     <p class=""><i class="fa-solid fa-dollar-sign"></i> payement a la livraison</p>
                     <div class="hstack gap-2">
                     <p>Quantité</p>
-                    <input type="number" class="form-control w-25 " min="1" max="5">
-                    <p class="fs-5">Total: <span>10000</span>FCFA </p>
-                    
+                    <input type="number" id="input1" class="form-control quantity-input w-25 " min="1" max="5">
+                    <p class="fs-5  ">Total: <span class="Total2 price fw-bold"></span></p>
                 </div>
-        <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">payer maintenant</button>
+        <button class="btn btn-secondary btna" id="commande-click" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">payer maintenant</button>
                
 
 
@@ -82,28 +82,28 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Detail sur la carte</h1>
+        <h1 class="modal-title fs-5 " id="exampleModalToggleLabel2" >Detail sur la carte</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <P class="fs-6 text-center">VOUS ALLEZ PAYER AU TOTAL:</P>
+      <P class="fs-6 text-center Total3"></P>
 
-      <form class="row g-3 needs-validation novalidate">
+      <form class="row g-3 needs-validation novalidate" id="myForm">
         <div class="col-md-6">
-          <input type="text" class="form-control" id="validationCustom01" placeholder="Entrer votre nom" required>
+          <input type="text" class="form-control input-commande-name" id="validationCustom01" placeholder="Entrer votre nom" required>
         </div>
         <div class="col-md-6">
           
-          <input type="email" class="form-control" id="validationCustom02" value=""  placeholder="Entrer votre address">
-          
-        </div>
-        <div class="col-md-6">
-         
-          <input type="number" class="form-control" id="validationCustom03" placeholder="Entrer votre télephone" required>
+          <input type="email" class="form-control input-commande" id="validationCustom02" value=""  placeholder="Entrer votre address">
           
         </div>
         <div class="col-md-6">
          
-          <select class="form-select" aria-label="Default select example" id="validationCustom04"required>
+          <input type="number" class="form-control input-commande" id="validationCustom03" placeholder="Entrer votre télephone" required>
+          
+        </div>
+        <div class="col-md-6">
+         
+          <select class="form-select input-commande-second" aria-label="Default select example" id="validationCustom04"required>
             <option selected>mode de payement</option>
             <option value="1">MTN money</option>
             <option value="2">Orange money</option>
@@ -111,18 +111,79 @@
             </select>
           
         </div>
-      </form>
 
     <div class="col-md-12 pt-2 text-center">
-        <button class="btn btn-primary w-100" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" disabled >Payer</button>
+        <button class="btn btn-primary w-100" id="submit-commande" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Payer</button>
       </div>
+    </div>
+  </form>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <p  class="display-6 text-center">MERCI D'AVOIR PASSER LA COMMANDE SUR CAMERRESTO</p>
+          
+          </div>
+      
+        </form>
+      </div>
+  
     </div>
   </div>
 </div>
 
 
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="text-center"  >
+      
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link active  "id="bar" aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="#plats">Plats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="#Pourquoi">Pourquoi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="#Menus">Menus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="commande.html">Commandes</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link  " href="#Apropos">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <script src="js/index.js"></script>
+    </p>
+  </div>
+</div>
+</div>
+</nav>
+</header>
+
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
